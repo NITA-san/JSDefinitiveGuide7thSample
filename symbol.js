@@ -14,6 +14,15 @@ console.log(o[strname]);
 console.log(o[symname]);
 console.log(o[Symbol("propname")]);
 
+console.log("--------");
+let a = Symbol("a");
+let b = Symbol("a");
+console.log(a===b);
+console.log(a.toString());
+console.log(b.toString());
+console.log(a.toString()===Symbol(b.toString()));
+console.log("--------");
+
 //let s = Symbol("sym_x");
 //console.log(s.toString());             // => "Symbol(sym_x)"
 
