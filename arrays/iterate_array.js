@@ -9,3 +9,9 @@ console.log(everyother);  // => "Hlowrd"
 let [a,b] = [1,"a"];
 console.log(a);
 console.log(b);
+
+let uppercase = "";
+letters.forEach(letter => {  // Note arrow function syntax here
+    uppercase += letter.toUpperCase();
+});
+console.log(uppercase);  // => "HELLO WORLD"
