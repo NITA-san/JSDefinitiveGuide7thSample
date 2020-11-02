@@ -25,13 +25,14 @@ getJSON("/api/user/profile").then(displayUserProfile).catch(displayError);
 function createPromise(url) {
 
     //    return new Promise((resolve) => resolve("promise rejected! " + url));
-    setTimeout(() => {return "promise rejected! " + url;}, 2000);
+    return "return string! " + url;
 }
 
 async function getJSONAsync(url) {
-    p = createPromise(url);
+    p = await createPromise(url);
     //    p = await getJSON(url);
     displayUserProfile(p);
+//    createPromise(url).then(displayUserProfile)
 }
 
 getJSONAsync("/api/user/profile")
