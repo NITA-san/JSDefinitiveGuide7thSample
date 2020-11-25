@@ -15,12 +15,14 @@ fs.copyFile("ch15.txt", "ch16.txt", fs.constants.COPYFILE_EXCL, err => {
 // it, the copy will be a copy-on-write clone of the original file, meaning
 // that no additional storage space will be required until either the original
 // or the copy is modified.
-// fs.promises.copyFile("Important data",
-//     `Important data ${new Date().toISOString()}"
-//                      fs.constants.COPYFILE_EXCL | fs.constants.COPYFILE_FICLONE)
-//     .then(() => {
-//         console.log("Backup complete");
-//     });
-//     .catch(err => {
-//         console.error("Backup failed", err);
-//     });
+fs.promises.copyFile("test.json",
+    "test.json." + `${new Date().toISOString()}`,
+    fs.constants.COPYFILE_EXCL | fs.constants.COPYFILE_FICLONE)
+    .then(() => {
+        console.log("Backup complete");
+    })
+    .catch(err => {
+        console.error("Backup failed", err);
+    });
+
+//fs.promises.copyFile("./test.json","./dest_test.json");
