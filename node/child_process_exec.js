@@ -13,5 +13,6 @@ function parallelExec(commands) {
 }
 
 module.exports = parallelExec;
-
-parallelExec(["ls -1"]);
+//execP("ls -l").then(stdout => stdout.stdout).then(console.log);
+//execP("ls -zzzl").then(stdout => console.log(stdout)).catch(stderr=>console.log(stderr));
+parallelExec(["ls -1","pwd"]).then(console.log);
