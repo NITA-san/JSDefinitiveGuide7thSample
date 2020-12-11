@@ -16,3 +16,6 @@ for(let j = 0; j < a.length; j++) {
 
 console.log(a.length);
 console.log(a[3]);
+
+let b = "hello world";
+console.log(b.reverse);
