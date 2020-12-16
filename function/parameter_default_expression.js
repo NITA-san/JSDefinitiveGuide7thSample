@@ -7,3 +7,6 @@ function getPropertyNames(o, a = []) {
 
 console.log(getPropertyNames({id1: "dddd"}));
 console.log(getPropertyNames({id1: "dddd"}, ["aaaaa","bbbb"]));
+
+const rectangle = (width, height=width*2) => ({width, height});
+console.log(rectangle(1));  // => { width: 1, height: 2 }
