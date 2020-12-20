@@ -1,4 +1,5 @@
-let o = () => {};
-f = () => console.log("I'm f");
+let f = () => { return "I'm f"};
 
-f.call();
+const o = {};
+console.log(f.call(o,"test"));
+console.log(f.apply(o));
