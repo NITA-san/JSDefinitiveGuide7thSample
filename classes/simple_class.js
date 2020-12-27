@@ -36,3 +36,4 @@ let r = range(1,3);      // Create a range object
 console.log(r.includes(2));            // => true: 2 is in the range
 console.log(r.toString());             // => "(1...3)"
 console.log([...r]);                   // => [1, 2, 3]; convert to an array via iterator
+console.log(range.methods.isPrototypeOf(r));  // range.methods is the prototype object.
