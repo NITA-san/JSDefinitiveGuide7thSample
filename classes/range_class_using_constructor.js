@@ -29,3 +29,5 @@ let r = new Range(1,3);   // Create a Range object; note the use of new
 console.log(r.includes(2));             // => true: 2 is in the range
 console.log(r.toString());              // => "(1...3)"
 console.log([...r]);                    // => [1, 2, 3]; convert to an array via iterator
+
+console.log(r instanceof Range);
