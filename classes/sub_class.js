@@ -35,3 +35,9 @@ class Span extends Range {
 let span = new Span(2,3);
 console.log(span.includes(4));
 console.log(span.toString());
+
+let square = function(x) { return x * x; };
+console.log(square(3));  // => 9
+
+let Square = class { constructor(x) { this.area = x * x; } };
+console.log(new Square(3).area);  // => 9
