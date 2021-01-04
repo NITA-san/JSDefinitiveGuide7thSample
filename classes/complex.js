@@ -71,3 +71,8 @@ console.log(c.plus(d).toString());           // => "{5,5}"; use instance methods
 console.log(c.magnitude);                    // => Math.hypot(2,3); use a getter function
 console.log(Complex.product(c, d));          // => new Complex(0, 13); a static method
 console.log(Complex.ZERO.toString());        // => "{0,0}"; a static property
+
+// Return a complex number that is the complex conjugate of this one.
+Complex.prototype.conj = function() { return new Complex(this.r, -this.i); };
+
+console.log(c.conj());
