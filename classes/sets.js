@@ -197,3 +197,5 @@ class BitSet extends AbstractWritableSet {
         }
     }
 }
+
+console.log((new RangeSet(1,2)).toString());
