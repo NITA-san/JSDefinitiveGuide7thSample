@@ -1,3 +1,3 @@
-import {default as logging} from './default_export.mjs';
+import logging from './default_export.mjs';
 
 logging();
