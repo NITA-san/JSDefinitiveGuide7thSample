@@ -29,3 +29,12 @@ for(let p of oneDigitPrimes) { // Loop through the one-digit primes
     sum += p;                  // and add them up
 }
 console.log(sum);                            // => 17: 2 + 3 + 5 + 7
+
+let product = 1;
+oneDigitPrimes.forEach(n => { product *= n; });
+console.log(product);     // => 210: 2 * 3 * 5 * 7
+
+oneDigitPrimes.forEach((n,m) => {
+    console.log("n=>"+n);
+    console.log("m=>"+m);
+});
