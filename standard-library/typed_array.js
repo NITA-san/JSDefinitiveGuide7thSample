@@ -13,3 +13,6 @@ function sieve(n) {
 }
 
 console.log(sieve(25));
+
+let ints = new Int16Array(10);       // 10 short integers
+console.log(ints.fill(3).map(x=>x*x).join(""));    // => "9999999999"
