@@ -21,3 +21,9 @@ let address = {city:"aaa", country:"japan", state:"yamagata"}
 text = JSON.stringify(address, ["city","state","country"]);
 
 console.log(text);
+
+// Specify a replacer function that omits RegExp-value properties
+let o = {a:/./, b:"bbb"}
+let json = JSON.stringify(o, (k, v) => v instanceof RegExp ? undefined : v);
+
+console.log(json);
