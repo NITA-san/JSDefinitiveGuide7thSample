@@ -15,3 +15,9 @@ let data = JSON.parse(text, function(key, value) {
 });
 
 console.log(data);
+
+// Specify what fields to serialize, and what order to serialize them in
+let address = {city:"aaa", country:"japan", state:"yamagata"}
+text = JSON.stringify(address, ["city","state","country"]);
+
+console.log(text);
