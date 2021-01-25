@@ -14,3 +14,10 @@ const fuzzyMatcher = new Intl.Collator(undefined, {
 }).compare;
 let strings = ["food", "fool", "Føø Bar"];
 console.log(strings.findIndex(s => fuzzyMatcher(s, "Foobar") === 0));  // => 2
+
+// Before 1994, CH and LL were treated as separate letters in Spain
+const modernSpanish = Intl.Collator("es-ES").compare;
+const traditionalSpanish = Intl.Collator("es-ES-u-co-trad").compare;
+let palabras = ["luz", "llama", "como", "chico"];
+console.log(palabras.sort(modernSpanish));      // => ["chico", "como", "llama", "luz"]
+console.log(palabras.sort(traditionalSpanish)); // => ["como", "chico", "luz", "llama"]
