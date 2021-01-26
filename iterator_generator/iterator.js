@@ -19,3 +19,7 @@ console.log([...m]);            // => [["one", 1], ["two", 2]]: default iteratio
 console.log([...m.entries()]);  // => [["one", 1], ["two", 2]]: entries() method is the same
 console.log([...m.keys()]);     // => ["one", "two"]: keys() method iterates just map keys
 console.log([...m.values()]);   // => [1, 2]: values() method iterates just map values
+
+// Strings are iterable, so the two sets are the same:
+console.log(new Set("abc")); // => new Set(["a", "b", "c"])
+console.log(new Set(m)); // => new Set(["a", "b", "c"])
