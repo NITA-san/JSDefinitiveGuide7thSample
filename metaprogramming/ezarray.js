@@ -10,7 +10,7 @@ console.log(e.last);  // => 3: the last element of EZArray e
 console.log(f.last);  // => 9: f is also an EZArray with a last property
 
 class EZArraySpecies extends Array {
-    static get [Symbol.species]() { return Object; }
+    static get [Symbol.species]() { return Array; }
     get first() { return this[0]; }
     get last() { return this[this.length-1]; }
 }
@@ -20,4 +20,3 @@ f = e.map(x => x - 1);
 console.log(e);
 console.log(e.last);  // => 3
 console.log(f.last);  // => undefined: f is a regular array with no last getter
-console.log(f.first)
