@@ -11,3 +11,5 @@ let p = {
 
 console.log(o.get);
 console.log(Reflect.get(o,"get",p));
+
+console.log(Reflect.getOwnPropertyDescriptor(p, "id"));
