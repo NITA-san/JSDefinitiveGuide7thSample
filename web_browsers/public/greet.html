@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <!-- Hello -->
+  </head>
+  <body>
+    <h1></h1>
+    <script>
+      let name = new URL(document.URL).searchParams.get("name");
+      name = name
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#x27;")
+        .replace(/\//g, "&#x2F;");
+      document.querySelector("h1").innerHTML = "Hello " + name;
+    </script>
+  </body>
+</html>
